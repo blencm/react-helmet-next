@@ -1,2 +1,16 @@
 lib
 node_modules
+.DS_Store
+npm-debug.log
+yarn-error.log
+.vscode
+.idea
+*.tsbuildinfo
+dist
+.eslintcache
+
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+*.log
+*.tgz
