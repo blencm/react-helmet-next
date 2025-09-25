@@ -1,0 +1,71 @@
+{
+  "name": "react-helmet-next",
+  "version": "0.0.2",
+  "private": false,
+  "description": "Helmet for React 16+ ",
+  "sideEffects": false,
+  "main": "./lib/index.js",
+  "module": "./lib/index.esm.js",
+  "typings": "./lib/index.d.ts",
+  "repository": "http://github.com/blencm/react-helmet-next",
+  "author": "Bleker Cordova <bleker@gliyen.com>",
+  "license": "MIT",
+  "files": [
+    "lib/"
+  ],
+  "keywords": [
+    "react",
+    "react-dom",
+    "helmet-react",
+    "react-helmet-async",
+    "react-helmet-next",
+    "helmet"
+  ],
+  "scripts": {
+    "clean": "rimraf lib",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint --report-unused-disable-directives .",
+    "lint-fix": "yarn lint --fix",
+    "test": "vitest run",
+    "test-watch": "yarn test --watch",
+    "test-update": "yarn test -u",
+    "compile": "yarn run clean && cross-env NODE_ENV=production tsx build.ts && yarn types",
+    "prepare": "yarn compile && husky install",
+    "types": "tsc src/index.tsx --jsx react --declaration --esModuleInterop --allowJs --emitDeclarationOnly --outDir lib"
+  },
+  "dependencies": {
+    "invariant": "^2.2.4",
+    "react-fast-compare": "^3.2.2",
+    "shallowequal": "^1.1.0"
+  },
+  "peerDependencies": {
+    "react": "^16.6.0 || ^17.0.0 || ^18.0.0 || ^19.1.1 || ^20.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.0.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@types/eslint": "^9.6.1",
+    "@types/invariant": "^2.2.37",
+    "@types/jsdom": "^21.1.7",
+    "@types/react": "^19.1.13",
+    "@types/shallowequal": "^1.1.5",
+    "@vitejs/plugin-react": "5.0.3",
+    "cross-env": "^10.0.0",
+    "esbuild": "^0.25.10",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "husky": "^9.1.7",
+    "jsdom": "^27.0.0",
+    "prettier": "^3.6.2",
+    "raf": "^3.4.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "rimraf": "^6.0.1",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7",
+    "vitest": "^3.2.4"
+  }
+}
