@@ -2,7 +2,7 @@
 
 import { defineConfig } from 'vite';
 import type { UserConfig } from 'vite';
-import type { InlineConfig } from 'vitest';
+import type { InlineConfig } from "vitest/node";
 import react from '@vitejs/plugin-react';
 
 interface VitestConfigExport extends UserConfig {
